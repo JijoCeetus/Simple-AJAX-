@@ -1,0 +1,1 @@
+This is text loaded from the external file using ajax call

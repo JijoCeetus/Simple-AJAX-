@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<div id="pane"></div>
+<button type="button" onclick="loadData()">Click</button>
+<script>
+function loadData(){
+var xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function(){
+if(xhttp.readyState == 4 && xhttp.status ==200)
+{
+document.getElementById("pane").innerHTML=xhttp.responseText;
+}
+
+};
+xhttp.open("GET","text.txt",true);
+xhttp.send();
+}
+</script>
+</body>
+</html>
